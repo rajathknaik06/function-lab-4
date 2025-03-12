@@ -1,0 +1,34 @@
+""" Implement a function that counts the number of vowels in a given input string. The vowels, which include both lowercase and uppercase vowels (a, e, i, o, u, A, E, I, O, U), are stored in a global variable called VOWELS.
+
+
+
+The function should use local variables for counting the vowels and return the count as the output.
+
+
+
+Function Signature: count_vowels(input_string)
+
+Input format :
+The input consists of a single line containing a string.
+
+Output format :
+The output consists of a single line containing an integer representing the number of vowels (both lowercase and uppercase) found in the input string in the format:
+
+"Number of vowels in the string: [number of vowels]""""
+
+VOWELS = "aeiouAEIOU"
+
+def count_vowels(input_string):
+    vowel_count = 0
+
+    for char in input_string:
+        if char in VOWELS:
+            vowel_count += 1
+
+    return vowel_count
+
+input_string = input()
+
+vowel_count = count_vowels(input_string)
+
+print(f"Number of vowels in the string: {vowel_count}")
